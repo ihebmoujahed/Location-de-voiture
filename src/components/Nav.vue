@@ -7,9 +7,9 @@
       <div class="container">
         <div class="row">
           <div class="left-menu">
-            <ul class="top-navbar" style="position: relative; left: 422px;text-decoration: none;">
+            <ul class="top-navbar" style="position: relative; left: 192px;text-decoration: none;">
               <li>
-                <a href="/en" style="text-decoration: none;">Home</a>
+                <a href="/" style="text-decoration: none;">Home</a>
               </li>
 
               <li>
@@ -23,12 +23,12 @@
         </div>
       </div>
       <div>
-        <nav class="navbar" style="position: relative">
+        <nav class="navbar" style="position: relative;top:-19px">
           <div style="position: relative; left: 372px">
-            <a class="navbar-brand" href="/Home"><img id="logo" src="../assets/image/logo.png" alt="" /></a>
+           <img id="logo" src="../assets/image/logo.png" alt="" />
 <a
               class="connexion"
-              href="#"
+              href="/inscreption"
               data-toggle="modal"
               data-target="#exampleModal"
               >CONNEXION</a>
