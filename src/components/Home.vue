@@ -157,9 +157,9 @@ const iheb = () => {
       </div>
     </div>
     <section id="sec3" class="bg-gray">
-      <div class="container">
+      <div class="container" style="margin-top:12px">
         <div  style="margin-top:82px">
-          <div style="position: relative; top: 52px">
+          <div style="position: relative; top: 32px">
             <h2 style="font-size:29px">CAR RENTAL IN TUNISIA</h2>
             <p style="text-align:justify;">La Tunisie a toujours été la destination de milliers de touristes venant du
               monde entier pour y passer leurs vacances et ils n’ont pas tort. La Tunisie séduit, envoute et ensorcelle.

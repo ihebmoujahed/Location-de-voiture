@@ -1,4 +1,12 @@
-<script setup>
+<script >
+export default {
+  methods: {
+
+    b b() {
+      window.location.assign ('')
+    }
+  }
+}
 </script>
 
 <template>
@@ -25,13 +33,8 @@
       <div>
         <nav class="navbar" style="position: relative;top:-19px">
           <div style="position: relative; left: 372px">
-           <img id="logo" src="../assets/image/logo.png" alt="" />
-<a
-              class="connexion"
-              href="/inscreption"
-              data-toggle="modal"
-              data-target="#exampleModal"
-              >CONNEXION</a>
+            <img id="logo" src="../assets/image/logo.png" alt="" />
+            <a class="connexion" href="/inscreption" data-toggle="modal" data-target="#exampleModal">CONNEXION</a>
             <form id="app-cover">
               <div id="select-box">
                 <input type="checkbox" id="options-view-button" />
@@ -46,12 +49,12 @@
                 </div>
                 <div id="options">
                   <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="codepen" />
+                    <input class="s-c top" type="radio" name="platform" value="codepen" v-on:click="bb()" />
                     <input class="s-c bottom" type="radio" name="platform" value="codepen" />
                     <span value="http://localhost:3000/Home" class="label">Home</span>
                   </div>
                   <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="dribbble" />
+                    <input class="s-c top" type="radio" name="platform" value="dribbble"  />
                     <input class="s-c bottom" type="radio" name="platform" value="dribbble" />
                     <span class="label">Transfert</span>
                   </div>
