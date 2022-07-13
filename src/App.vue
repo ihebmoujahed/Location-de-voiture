@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Home from '@/components/Home.vue'
 import Nav from './components/Nav.vue'
+import axios from 'axios'
 
 </script>
 

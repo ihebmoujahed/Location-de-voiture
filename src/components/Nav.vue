@@ -2,7 +2,7 @@
 export default {
   methods: {
 
-    b b() {
+     b() {
       window.location.assign ('')
     }
   }
