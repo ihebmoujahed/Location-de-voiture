@@ -24,8 +24,6 @@ add() {
         .post("http://localhost:3001/api/items/SignUp",option)
         .then((response) => {
           console.log(response);
-          localStorage.setItem("user", JSON.stringify(option));
-          // location.reload();
         })
         .catch((error) => {
           console.log(error);

@@ -24,6 +24,14 @@ CREATE TABLE Payment (
   FOREIGN KEY (id_User) REFERENCES Users (id_User),
   PRIMARY KEY (id_payment)
 );
+CREATE TABLE agencies (
+  id_agencies int NOT NULL AUTO AUTO_INCREMENT,
+  name_agencies varchar (255)NOT NULL,
+  image_agencies varchar (255)NOT NULL,
+  localisation_name varchar (255)NOT NULL,
+  localisation_map varchar (500)NOT NULL,
+  PRIMARY KEY (id_agencies),
+);
 
 /*  Execute this file from the command line by typing:
  *    mysql -u root -p < server/database-mysql/schema.sql

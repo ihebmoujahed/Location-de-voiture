@@ -6,6 +6,8 @@ const iheb = () => {
 </script>
 
 <template>
+        <body>
+
   <div>
 
     <div style="margin-bottom:122px">
@@ -94,6 +96,7 @@ const iheb = () => {
           <option>50</option>
         </select>
       </div>
+      <button class="button-87" role="button">BOOK</button>
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
       style="position:relative;bottom:162px">
@@ -120,22 +123,23 @@ const iheb = () => {
         RENT A CAR</p>
     </div>
     <div class="promo" style="text-align:center;margin-top:-144px;">
-      <a href="/ar"><img style="position: relative;left:-22px"
+      <a href="/Promotions"><img style="position: relative;left:-22px"
           src="https://scontent.ftun14-1.fna.fbcdn.net/v/t1.15752-9/290532544_866200218103925_6640462198766946819_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=c_RNssDVlHcAX_EDVqT&_nc_ht=scontent.ftun14-1.fna&oh=03_AVITcp6KDUZEBMc3sLnqIFp1K6qD8fDIl6_STHOFxiMZBA&oe=62E40597"
           alt=""></a>
-      <a href="/en"><img
+      <a href="/Promotions"><img
           src="https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/290566013_445813447015786_7055710302420195703_n.png?_nc_cat=108&ccb=1-7&_nc_sid=ae9488&_nc_ohc=lfxcxI_AtI8AX9emKsD&_nc_ht=scontent.ftun16-1.fna&oh=03_AVJInnXyp52x3xNLyWXtPsGAU-C6SLTQwkAdzJGOgGNv_g&oe=62EA6314"
           alt=""></a>
     </div>
-    <h2 style="text-align:center;">NOS PROMOS</h2>
-    <p style="text-align:center;font-weight:bold;font-size:18px;color: #800000 !important;margin-top:52px">Location de
-      voiture en Tunisie</p>
+    <h2 style="text-align:center;">OUR PROMOTIONS</h2>
+    <p style="text-align:center;font-weight:bold;font-size:18px;color: #800000 !important;margin-top:52px">CAR RENTAL IN
+      TUNISIA</p>
     <div class="row">
       <div class="column">
         <div class="card">
           <img src="https://avantgarde.tn/static/upload/471a854cd067bdc9c9d860125c3d830e.png" alt="">
           <h3>Rental Car Promotion</h3>
           <p>Special promotion: One week: 374,500 DT One month: 1350.00 DT</p>
+          <a href="/Promotions"><button class="button-40" role="button">read more</button></a>
         </div>
       </div>
 
@@ -144,6 +148,8 @@ const iheb = () => {
           <img src="https://avantgarde.tn/static/upload/97076f0ea4d39ea07f453c298444256d.png" alt="">
           <h3>Special Offer !!</h3>
           <p>Special promotion: The week: 357.00 DTThe month: 1275.00 DT</p>
+          <a href="/Promotions"><button class="button-40" role="button">read more</button></a>
+
         </div>
       </div>
 
@@ -152,41 +158,41 @@ const iheb = () => {
           <img src="https://avantgarde.tn/static/upload/69eab4b802c786db885ea3d8017d8850.jpg" alt="">
           <h3>Best Car Rental Deal</h3>
           <p>Much more than a car at with unbeatable price! One week rental: 654,50 DT One Month Rental: 1675.50 DT
-            Promo valid From 20/01/2019 to 10/02/2019 Best Car Rental Offer In Tunisia</p>
+           </p>
+          <a href="/Promotions"><button class="button-40" role="button">read more</button></a>
+
         </div>
       </div>
     </div>
     <section id="sec3" class="bg-gray">
       <div class="container" style="margin-top:12px">
-        <div  style="margin-top:82px">
-          <div style="position: relative; top: 32px">
+        <div style="margin-top:82px">
+          <div style="position: relative; top: 7px">
             <h2 style="font-size:29px">CAR RENTAL IN TUNISIA</h2>
-            <p style="text-align:justify;">La Tunisie a toujours été la destination de milliers de touristes venant du
-              monde entier pour y passer leurs vacances et ils n’ont pas tort. La Tunisie séduit, envoute et ensorcelle.
-              Des plages comme on en voit rarement. Des mers cristallines ressemblant à de gigantesques piscines où l’on
-              arrive à voir clairement les petits poissons nageant entre les pieds des baigneurs. Un soleil réchauffant
-              les corps et les cœurs auquel les gens s’abandonnent pendant leurs séances de bronzette.
-              La Tunisie ne se limite pas aux plages au sable blanc. C’est tout un patrimoine culturel et historique
-              qu’elle compte à son actif : Des ports puniques, des sites archéologiques et des ports de plaisance et
-              plus encore. Tant de choses à voir se trouvant dans les quatre coins du pays. C’est pourquoi la voiture de
-              location se trouve être le meilleur moyen pour se déplacer rapidement et faire le maximum de sites dans le
-              pays du soleil.</p>
-            <h2 style="font-size:29px;color:#800000">Louer un véhicule en Tunisie</h2>
-            <p style="text-align:justify">Des vacances de rêve. Sans la contrainte du transport. Voilà ce que notre
-              agence de location de voitures
-              vous propose. Disposant d’un grand parc automobile réunissant toutes sortes de véhicules de location :
-              premiums, citadines, utilitaires et voitures de luxe, Avantgarde arrive à satisfaire une clientèle des
-              plus exigeantes. Nous accordons la plus grande importance aux horaires de livraisons et à l’état de nos
-              voitures de location. Nous veillons toujours à leur bon entretien. C’est ce qui fait le fort d’Avantgarde.
-              Vous pouvez avoir votre devis de location de voiture et faire la réservation de votre véhicule en ligne.
-              Nous nous chargeons de tout planifier et de vous livrer votre véhicule. Ou, si vous préférez, vous pouvez
-              vous adresser à notre agence située au sein de l’aéroport de Tunis Carthage et louer le véhicule que vous
-              souhaitez sur place.</p>
+            <p style="text-align:justify;">Tunisia has always been the destination of thousands of tourists from all
+              over the world to spend their holidays there and they are not wrong. Tunisia seduces, bewitches and
+              bewitches. Beaches like you rarely see. Crystal clear seas resembling gigantic swimming pools where you
+              can clearly see the small fish swimming between the feet of swimmers. A sun warming the bodies and the
+              hearts to which people abandon themselves during their sunbathing sessions.
+              Tunisia is not limited to white sand beaches. It has a whole cultural and historical heritage to its
+              credit: Punic ports, archaeological sites and marinas and more. So many things to see located in the four
+              corners of the country. This is why the rental car is the best way to move quickly and do the maximum
+              number of sites in the country of the sun.</p>
+            <h2 style="font-size:29px;color:#800000">Rent a vehicle in Tunisia</h2>
+            <p style="text-align:justify">A dream vacation. Without the constraint of transport. This is what our car
+              rental agency offers you. With a large fleet of all kinds of rental vehicles: premium, city, utility and
+              luxury cars, Avantgarde manages to satisfy the most demanding customers. We attach the greatest importance
+              to delivery times and the condition of our rental cars. We always take care of their good maintenance.
+              This is what makes Avantgarde strong. You can have your car rental quote and book your vehicle online. We
+              take care of planning everything and delivering your vehicle to you. Or, if you prefer, you can contact
+              our agency located within Tunis Carthage airport and rent the vehicle you want on site.</p>
           </div>
         </div>
       </div>
     </section>
   </div>
+          </body>
+
 </template>
 
 <style scoped>
@@ -279,11 +285,85 @@ a:hover {
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
-  height: 333px;
+  height: 493px;
 }
 
 .bg-gray {
   background-color: #e6e6e6;
   text-align: center
+}
+
+.button-40 {
+  background-color: #800000;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 123px;
+  margin-left: 272px;
+}
+
+.button-40:hover {
+  background-color: #513b37;
+}
+
+.button-40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-40 {
+    padding: .75rem 1.5rem;
+  }
+}
+.button-87 {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #800000;
+  background-image: linear-gradient(45deg, #800000 0%, #800000  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 10%;
+  position: relative;
+  bottom: 114px;
+  left: 1302px;
+}
+
+.button-87:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-87:active {
+  transform: scale(0.95);
 }
 </style>

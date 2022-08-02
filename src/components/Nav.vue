@@ -1,21 +1,25 @@
 <script >
+import PromotionsVue from './Promotions/Promotions.vue'
+
 export default {
   methods: {
 
-     b() {
-      window.location.assign ('')
+     location() {
+      window.location.assign ('/professionnels/location-voiture-longue-duree-tunisie')
+    },
+    Promotions(){
+      window.location.assign ('/Promotions')
+
     }
   }
+  
 }
 </script>
 
 <template>
   <header>
     <div class="top-menu">
-      <div class="container">
-        <div class="row">
-          <div class="left-menu">
-            <ul class="top-navbar" style="position: relative; left: 192px;text-decoration: none;">
+      <ul class="top-navbar" style="position: relative; left: 192px;text-decoration: none;">
               <li>
                 <a href="/" style="text-decoration: none;">Home</a>
               </li>
@@ -27,6 +31,10 @@ export default {
                 <a href="http://" style="text-decoration: none;">Lesings</a>
               </li>
             </ul>
+      <div class="container">
+        <div class="row">
+          <div class="left-menu">
+            
           </div>
         </div>
       </div>
@@ -42,10 +50,7 @@ export default {
                   <div id="selected-value">
                     <span style="color: white">Menu</span>
                   </div>
-                  <div id="chevrons">
-                    <i class="fas fa-chevron-up"></i>
-                    <i class="fas fa-chevron-down"></i>
-                  </div>
+                 
                 </div>
                 <div id="options">
                   <div class="option">
@@ -59,7 +64,7 @@ export default {
                     <span class="label">Transfert</span>
                   </div>
                   <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="behance" />
+                    <input class="s-c top" type="radio" name="platform" value="behance" v-on:click="location()"/>
                     <input class="s-c bottom" type="radio" name="platform" value="behance" />
                     <span class="label">Locations Longues Durée</span>
                   </div>
@@ -73,13 +78,11 @@ export default {
                     <input class="s-c top" type="radio" name="platform" value="freecodecamp" />
                     <input class="s-c bottom" type="radio" name="platform" value="freecodecamp" />
                     <span class="label">Service</span>
-                    <span class="opt-val">Service</span>
                   </div>
                   <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="freecodecamp" />
+                    <input class="s-c top" type="radio" name="platform" value="freecodecamp" v-on:click="Promotions()" />
                     <input class="s-c bottom" type="radio" name="platform" value="freecodecamp" />
                     <span class="label">Promotions</span>
-                    <span class="opt-val">Promotions</span>
                   </div>
                   <div class="option">
                     <input class="s-c top" type="radio" name="platform" value="freecodecamp" />
