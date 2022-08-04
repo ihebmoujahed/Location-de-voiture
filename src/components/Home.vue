@@ -97,7 +97,7 @@ const iheb = () => {
           <option>50</option>
         </select>
       </div>
-      <button class="button-87" role="button">BOOK</button>
+      <button class="button-87" role="button">BOOKing</button>
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
       style="position:relative;bottom:162px">
