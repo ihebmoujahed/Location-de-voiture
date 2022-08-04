@@ -2,36 +2,37 @@
 import Loaction from "../../locations"
 </script>
 <template>
-    <html>
-        <body>
-            
+  <html>
+
+  <body>
+
     <div>
-        <div>
+      <div>
 
-            <div style="margin-top:122px;text-align: center;">
-                <h1>Our car hire deals in Tunisia</h1>
-            </div>
-           <div class="container" style="margin-top:72px ;">
-  <main class="grid">
-    <article v-for="elem in Loaction" :key="elem">
-      <img :src="elem.image" alt="Sample photo">
-      <div class="text">
-        <h3>{{elem.title}}</h3>
-        <p>{{elem.text}}</p>
-       
-        <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Plus</a>
-      </div>
-    </article>
-    
-  </main>
-</div>
-
-
+        <div style="margin-top:122px;text-align: center; display: inline;">
+          <h1>Our car hire deals in Tunisia</h1>
         </div>
-    </div>
-        </body>
+        <div class="container" style="margin-top:72px ;">
+          <main class="grid">
+            <article v-for="elem in Loaction" :key="elem">
+              <img :src="elem.image" alt="Sample photo">
+              <div class="text">
+                <h3>{{ elem.title }}</h3>
+                <p>{{ elem.text }}</p>
 
-    </html>
+                <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Plus</a>
+              </div>
+            </article>
+
+          </main>
+        </div>
+
+
+      </div>
+    </div>
+  </body>
+
+  </html>
 </template>
 <style>
 body {
@@ -45,12 +46,12 @@ body {
   align-items: stretch;
 }
 
-.grid > article {
+.grid>article {
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
 }
 
-.grid > article img {
+.grid>article img {
   max-width: 100%;
 }
 

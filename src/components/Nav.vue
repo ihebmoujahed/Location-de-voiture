@@ -4,97 +4,94 @@ import PromotionsVue from './Promotions/Promotions.vue'
 export default {
   methods: {
 
-     location() {
-      window.location.assign ('/professionnels/location-voiture-longue-duree-tunisie')
+    location() {
+      window.location.assign('/professionnels/location-voiture-longue-duree-tunisie')
     },
-    Promotions(){
-      window.location.assign ('/Promotions')
+    Promotions() {
+      window.location.assign('/Promotions')
 
+    },
+    nos_agences(){
+     window.location.assign('/nos-agences') 
     }
   }
-  
+
 }
 </script>
 
 <template>
   <header>
-    <div class="top-menu">
-      <ul class="top-navbar" style="position: relative; left: 192px;text-decoration: none;">
-              <li>
-                <a href="/" style="text-decoration: none;">Home</a>
-              </li>
+    <nav class="navbar navbar-light" style="background-color: white;;">
+      <ul class="top-navbar" style="position: relative; left: 392px;text-decoration: none;bottom:22px">
+        <li>
+          <a href="/" style="text-decoration: none;">Home</a>
+        </li>
 
-              <li>
-                <a href="/hello" style="text-decoration: none;">Transfer</a>
-              </li>
-              <li>
-                <a href="http://" style="text-decoration: none;">Lesings</a>
-              </li>
-            </ul>
-      <div class="container">
-        <div class="row">
-          <div class="left-menu">
-            
-          </div>
-        </div>
-      </div>
-      <div>
-        <nav class="navbar" style="position: relative;top:-19px">
-          <div style="position: relative; left: 372px">
-            <img id="logo" src="../assets/image/logo.png" alt="" />
-            <a class="connexion" href="/inscreption" data-toggle="modal" data-target="#exampleModal">CONNEXION</a>
-            <form id="app-cover">
-              <div id="select-box">
-                <input type="checkbox" id="options-view-button" />
-                <div id="select-button" class="brd">
-                  <div id="selected-value">
-                    <span style="color: white">Menu</span>
-                  </div>
-                 
+        <li>
+          <a href="" style="text-decoration: none;">Transfer</a>
+        </li>
+        <li>
+          <a href="http://" style="text-decoration: none;">Lesings</a>
+        </li>
+      </ul>
+      <nav class="navbar" style="position:relative;bottom:22px">
+        <div style="position: relative; left: 372px">
+          <img id="logo" src="../assets/image/logo.png" alt="" />
+          <a class="connexion" href="/inscreption" data-toggle="modal" data-target="#exampleModal">CONNEXION</a>
+          <form id="app-cover">
+            <div id="select-box">
+              <input type="checkbox" id="options-view-button" />
+              <div id="select-button" class="brd">
+                <div id="selected-value">
+                  <span style="color: white">Menu</span>
                 </div>
-                <div id="options">
-                  <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="codepen" v-on:click="bb()" />
-                    <input class="s-c bottom" type="radio" name="platform" value="codepen" />
-                    <span value="http://localhost:3000/Home" class="label">Home</span>
-                  </div>
-                  <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="dribbble"  />
-                    <input class="s-c bottom" type="radio" name="platform" value="dribbble" />
-                    <span class="label">Transfert</span>
-                  </div>
-                  <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="behance" v-on:click="location()"/>
-                    <input class="s-c bottom" type="radio" name="platform" value="behance" />
-                    <span class="label">Locations Longues Durée</span>
-                  </div>
-                  <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="hackerrank" />
-                    <input class="s-c bottom" type="radio" name="platform" value="hackerrank" />
-                    <span class="label">Our agencies</span>
-                  </div>
 
-                  <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="freecodecamp" />
-                    <input class="s-c bottom" type="radio" name="platform" value="freecodecamp" />
-                    <span class="label">Service</span>
-                  </div>
-                  <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="freecodecamp" v-on:click="Promotions()" />
-                    <input class="s-c bottom" type="radio" name="platform" value="freecodecamp" />
-                    <span class="label">Promotions</span>
-                  </div>
-                  <div class="option">
-                    <input class="s-c top" type="radio" name="platform" value="freecodecamp" />
-                  </div>
-                  <div id="option-bg"></div>
-                </div>
               </div>
-            </form>
-          </div>
-        </nav>
-      </div>
-    </div>
+              <div id="options">
+                <div class="option">
+                  <input class="s-c top" type="radio" name="platform" value="codepen" v-on:click="bb()" />
+                  <input class="s-c bottom" type="radio" name="platform" value="codepen" />
+                  <span value="http://localhost:3000/Home" class="label">Home</span>
+                </div>
+                
+                <div class="option">
+                  <input class="s-c top" type="radio" name="platform" value="dribbble" />
+                  <input class="s-c bottom" type="radio" name="platform" value="dribbble" />
+                  <span class="label">Transfert</span>
+                </div>
+                <div class="option">
+                  <input class="s-c top" type="radio" name="platform" value="behance" v-on:click="location()" />
+                  <input class="s-c bottom" type="radio" name="platform" value="behance" />
+                  <span class="label">Locations Longues Durée</span>
+                </div>
+                <div class="option">
+                  <input class="s-c top" type="radio" name="platform" value="hackerrank" v-on:click="nos_agences()"/>
+                  <input class="s-c bottom" type="radio" name="platform" value="hackerrank" />
+                  <span class="label">Our agencies</span>
+                </div>
+
+                <div class="option">
+                  <input class="s-c top" type="radio" name="platform" value="freecodecamp" />
+                  <input class="s-c bottom" type="radio" name="platform" value="freecodecamp" />
+                  <span class="label">Service</span>
+                </div>
+                <div class="option">
+                  <input class="s-c top" type="radio" name="platform" value="freecodecamp" v-on:click="Promotions()" />
+                  <input class="s-c bottom" type="radio" name="platform" value="freecodecamp" />
+                  <span class="label">Promotions</span>
+                </div>
+                
+                <div class="option">
+                  <input class="s-c top" type="radio" name="platform" value="freecodecamp" />
+                </div>
+                <div id="option-bg"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </nav>
+
   </header>
 </template>
 <style scoped>
@@ -181,11 +178,10 @@ a:hover {
   position: relative;
   left: 522px;
   top: -52px;
-
   letter-spacing: 0.025px;
-  margin-right: 35px;
   padding: 0.025px;
   margin: 0%;
+  width: 22px;
 }
 
 .brd {

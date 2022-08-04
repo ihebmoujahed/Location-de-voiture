@@ -6,6 +6,7 @@ const iheb = () => {
 </script>
 
 <template>
+<html>
         <body>
 
   <div>
@@ -133,13 +134,13 @@ const iheb = () => {
     <h2 style="text-align:center;">OUR PROMOTIONS</h2>
     <p style="text-align:center;font-weight:bold;font-size:18px;color: #800000 !important;margin-top:52px">CAR RENTAL IN
       TUNISIA</p>
-    <div class="row">
+    <div class="row" >
       <div class="column">
         <div class="card">
           <img src="https://avantgarde.tn/static/upload/471a854cd067bdc9c9d860125c3d830e.png" alt="">
           <h3>Rental Car Promotion</h3>
           <p>Special promotion: One week: 374,500 DT One month: 1350.00 DT</p>
-          <a href="/Promotions"><button class="button-40" role="button">read more</button></a>
+          <a href="/Promotions" class="button-40">more</a>
         </div>
       </div>
 
@@ -148,7 +149,7 @@ const iheb = () => {
           <img src="https://avantgarde.tn/static/upload/97076f0ea4d39ea07f453c298444256d.png" alt="">
           <h3>Special Offer !!</h3>
           <p>Special promotion: The week: 357.00 DTThe month: 1275.00 DT</p>
-          <a href="/Promotions"><button class="button-40" role="button">read more</button></a>
+          <a href="/Promotions" class="button-40">more</a>
 
         </div>
       </div>
@@ -159,7 +160,7 @@ const iheb = () => {
           <h3>Best Car Rental Deal</h3>
           <p>Much more than a car at with unbeatable price! One week rental: 654,50 DT One Month Rental: 1675.50 DT
            </p>
-          <a href="/Promotions"><button class="button-40" role="button">read more</button></a>
+          <a href="/Promotions" class="button-40">more</a>
 
         </div>
       </div>
@@ -192,6 +193,7 @@ const iheb = () => {
     </section>
   </div>
           </body>
+          </html>
 
 </template>
 
