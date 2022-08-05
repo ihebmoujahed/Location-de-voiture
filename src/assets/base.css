@@ -2,5 +2,10 @@ body {
 
   overflow-x:hidden;
   }
+@media all and (min-width:500){
+  #app{
+    background-color: black;
+  }
+}
 
   

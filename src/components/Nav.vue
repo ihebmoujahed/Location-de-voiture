@@ -1,95 +1,45 @@
 <script >
 import PromotionsVue from './Promotions/Promotions.vue'
 
-export default {
-  methods: {
-
-    location() {
-      window.location.assign('/professionnels/location-voiture-longue-duree-tunisie')
-    },
-    Promotions() {
-      window.location.assign('/Promotions')
-
-    },
-    nos_agences(){
-     window.location.assign('/nos-agences') 
-    }
-  }
-
-}
 </script>
 
 <template>
-  <header>
-    <nav class="navbar navbar-light" style="background-color: white;;">
-      <ul class="top-navbar" style="position: relative; left: 392px;text-decoration: none;bottom:22px">
-        <li>
-          <a href="/" style="text-decoration: none;">Home</a>
-        </li>
+  <header >
+    <nav class="navbar navbar-expand-lg navbar-light " style="position:relative;bottom:52px"> ;">
+      <div class="container-fluid">
+        <img id="logo" src="../assets/image/logo.png" alt="" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 72%;">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="http://localhost:3000">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Menu
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="">Home</a>
+                <a class="dropdown-item" href="">Transfert</a>
+                <a class="dropdown-item" href="/professionnels/location-voiture-longue-duree-tunisie">Locations Longues Durée</a>
+                <a class="dropdown-item" href="/nos-agences">Our agencies</a>
+                <a class="dropdown-item" href="#">Service</a>
+                <a class="dropdown-item" href="/Promotions">Promotions</a>
 
-        <li>
-          <a href="" style="text-decoration: none;">Transfer</a>
-        </li>
-        <li>
-          <a href="http://" style="text-decoration: none;">Lesings</a>
-        </li>
-      </ul>
-      <nav class="navbar" style="position:relative;bottom:22px">
-        <div style="position: relative; left: 372px">
-          <img id="logo" src="../assets/image/logo.png" alt="" />
-          <a class="connexion" href="/inscreption" data-toggle="modal" data-target="#exampleModal">CONNEXION</a>
-          <form id="app-cover">
-            <div id="select-box">
-              <input type="checkbox" id="options-view-button" />
-              <div id="select-button" class="brd">
-                <div id="selected-value">
-                  <span style="color: white">Menu</span>
-                </div>
+              </ul>
+            </li>
+          
+          </ul>
 
-              </div>
-              <div id="options">
-                <div class="option">
-                  <input class="s-c top" type="radio" name="platform" value="codepen" v-on:click="bb()" />
-                  <input class="s-c bottom" type="radio" name="platform" value="codepen" />
-                  <span value="http://localhost:3000/Home" class="label">Home</span>
-                </div>
-                
-                <div class="option">
-                  <input class="s-c top" type="radio" name="platform" value="dribbble" />
-                  <input class="s-c bottom" type="radio" name="platform" value="dribbble" />
-                  <span class="label">Transfert</span>
-                </div>
-                <div class="option">
-                  <input class="s-c top" type="radio" name="platform" value="behance" v-on:click="location()" />
-                  <input class="s-c bottom" type="radio" name="platform" value="behance" />
-                  <span class="label">Locations Longues Durée</span>
-                </div>
-                <div class="option">
-                  <input class="s-c top" type="radio" name="platform" value="hackerrank" v-on:click="nos_agences()"/>
-                  <input class="s-c bottom" type="radio" name="platform" value="hackerrank" />
-                  <span class="label">Our agencies</span>
-                </div>
-
-                <div class="option">
-                  <input class="s-c top" type="radio" name="platform" value="freecodecamp" />
-                  <input class="s-c bottom" type="radio" name="platform" value="freecodecamp" />
-                  <span class="label">Service</span>
-                </div>
-                <div class="option">
-                  <input class="s-c top" type="radio" name="platform" value="freecodecamp" v-on:click="Promotions()" />
-                  <input class="s-c bottom" type="radio" name="platform" value="freecodecamp" />
-                  <span class="label">Promotions</span>
-                </div>
-                
-                <div class="option">
-                  <input class="s-c top" type="radio" name="platform" value="freecodecamp" />
-                </div>
-                <div id="option-bg"></div>
-              </div>
-            </div>
-          </form>
         </div>
-      </nav>
+      </div>
     </nav>
 
   </header>
@@ -117,10 +67,7 @@ a {
   max-height: 50px;
 }
 
-.left-menu {
-  flex: 0 0 66.666667%;
-  max-width: 66.666667%;
-}
+
 
 .top-navbar {
   padding: 0;
