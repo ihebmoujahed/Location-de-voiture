@@ -15,7 +15,7 @@ $(function() {
         <nav>
         <ul class="menu">
             <li class="logo"><img src="https://avantgarde.tn/static/assets/images/logo-footer.png" alt=""></li>
-            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="/">Home</a></li>
             <li class="item"><a href="#">About</a></li>
             <li class="item"><a href="#">Services</a></li>
             <li class="item button"><a href="/connexion">Log In</a></li>
@@ -26,7 +26,6 @@ $(function() {
                 Menu
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/">Home</a>
                 <a class="dropdown-item" href="">Transfert</a>
                 <a class="dropdown-item" href="/professionnels/location-voiture-longue-duree-tunisie">Locations Longues Durée</a>
                 <a class="dropdown-item" href="/nos-agences">Our agencies</a>
