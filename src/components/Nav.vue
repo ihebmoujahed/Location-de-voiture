@@ -18,8 +18,8 @@ $(function() {
             <li class="item"><a href="/">Home</a></li>
             <li class="item"><a href="#">About</a></li>
             <li class="item"><a href="#">Services</a></li>
-            <li class="item button"><a href="/connexion">Log In</a></li>
-            <li class="item button secondary"><a href="/inscreption">Sign Up</a></li>
+            <li class="item button"><a href="connexion">Log In</a></li>
+            <li class="item button secondary"><a href="inscreption">Sign Up</a></li>
             <li class="toggle"><span class="bars"></span></li>
               <a  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -27,10 +27,10 @@ $(function() {
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="">Transfert</a>
-                <a class="dropdown-item" href="/professionnels/location-voiture-longue-duree-tunisie">Locations Longues Durée</a>
-                <a class="dropdown-item" href="/nos-agences">Our agencies</a>
+                <a class="dropdown-item" href="professionnels/location-voiture-longue-duree-tunisie">Locations Longues Durée</a>
+                <a class="dropdown-item" href="nos-agences">Our agencies</a>
                 <a class="dropdown-item" href="#">Service</a>
-                <a class="dropdown-item" href="/Promotions">Promotions</a>
+                <a class="dropdown-item" href="Promotions">Promotions</a>
               </ul>
         </ul>
 
