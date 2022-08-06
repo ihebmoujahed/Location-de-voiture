@@ -25,11 +25,7 @@ const routes = [
       name: 'connexion',
       component: Login
     },
-    {
-      path: '/inscription',
-      name: 'inscription',
-      component: Home
-    },
+   
     {
       path: '/Promotions',
       name: 'Promotions',

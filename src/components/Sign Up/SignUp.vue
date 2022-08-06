@@ -6,11 +6,11 @@ export default {
     ss() {
       $("body").hide(1000);
     },
-      change(event) {
+    change(event) {
       this[event.target.name] = event.target.value;
       console.log(this[event.target.name]);
     },
-add() {
+    add() {
       var option = {
         first_name: this.firstName,
         last_name: this.lastName,
@@ -21,95 +21,117 @@ add() {
       };
       console.log(option)
       axios
-        .post("http://localhost:3001/api/items/SignUp",option)
+        .post("http://localhost:3001/api/items/SignUp", option)
         .then((response) => {
           console.log(response);
         })
         .catch((error) => {
           console.log(error);
         });
-}
+    }
 
   },
 };
 </script>
 <template>
-  <div style="position: absolute; top: 142px">
-    <div class="container" style="margin-left: 122px">
-      <h1>Sign Up</h1>
-      <p>Please fill in this form to create an account.</p>
-      <hr />
-      <label for="firstName"><b>firstName</b></label>
-      <input
-        type="text"
-        placeholder="Enter first name"
-        name="firstName"
-        required
-        @input="change"
-      />
+  <section>
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-      <label for="email"><b>lastName</b></label>
-      <input
-        type="text"
-        placeholder="Enter last name"
-        name="lastName"
-        required
-        @input="change"
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-      />
+                  <form class="mx-1 mx-md-4">
 
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required @input="change"/>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="form3Example1c" class="form-control" name="firstName" @input="change" />
+                        <label class="form-label" for="form3Example1c">FirstName</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="form3Example1c" class="form-control" name="lastName" @input="change" />
+                        <label class="form-label" for="form3Example1c">LastName</label>
+                      </div>
+                    </div>
 
-      <label for="number"><b>Phone Number</b></label>
-      <input
-        type="number"
-        placeholder="Enter Phone Number"
-        name="PhoneNumber"
-        required
-        @input="change"
 
-      />
-      <label for="number"><b>Card ID</b></label>
-      <input
-        type="number"
-        placeholder="Enter Card ID"
-        name="CardID"
-        required
-        @input="change"
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="email" id="form3Example3c" class="form-control" name="email" @input="change" />
+                        <label class="form-label" for="form3Example3c">Your Email</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-phone me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="number" id="form3Example3c" class="form-control" name="PhoneNumber"
+                          @input="change" />
+                        <label class="form-label" for="form3Example3c">PhoneNumber</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-id-card me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="number" id="form3Example3c" class="form-control" name="CardID" @input="change" />
+                        <label class="form-label" for="form3Example3c">Card Id</label>
+                      </div>
+                    </div>
 
-      />
-      <label for="password"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" required    @input="change"/>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="form3Example4c" class="form-control" @input="change"
+                          name="password" />
+                        <label class="form-label" for="form3Example4c">Password</label>
+                      </div>
+                    </div>
 
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input
-        type="password"
-        placeholder="Repeat Password"
-        name="psw-repeat"
-        required
-                @input="change"
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="form3Example4cd" class="form-control" @input="change"
+                          name="password" />
+                        <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                      </div>
+                    </div>
 
-      />
-      <label>
-        <input
-          type="checkbox"
-          checked="checked"
-          name="remember"
-          style="margin-bottom: 15px"
-        />
-        Remember me
-      </label>
-      <a href="/connexion" onclick="">
-        <p>already have a account</p>
-      </a>
+                    <div class="form-check d-flex justify-content-center mb-5">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                      <label class="form-check-label" for="form2Example3">
+                        I agree all statements in <a href="#!">Terms of service</a>
+                      </label>
+                    </div>
 
-      <div class="clearfix">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn" v-on:click="add()">Sign Up</button>
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="button" class="btn btn-primary btn-lg" v-on:click="add()">Register</button>
+                    </div>
+
+                  </form>
+
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                  <img
+                    src="https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/297509517_778902546571064_7627047616391354112_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=-Xwso-JMFK8AX_wYsuL&_nc_ht=scontent.ftun16-1.fna&oh=03_AVL136EIIfBvzgiP2dE3xYKSR1IKVLEhtALhnHsr0N439A&oe=63149F44"
+                    class="img-fluid" alt="Sample image">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <style>
 input[type="text"],
@@ -178,6 +200,7 @@ button:hover {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
+
   .cancelbtn,
   .signupbtn {
     width: 100%;

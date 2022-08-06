@@ -8,9 +8,9 @@ import Promo from '../../promo';
     <div>
         <div>
 
-            <div>
+            <div style="position: relative;top:-22px;">
                 <img src="https://scontent.ftun14-1.fna.fbcdn.net/v/t1.15752-9/296429376_1105980373609415_3341798052715055884_n.png?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_ohc=AKg0E5P1aQEAX_cNSvO&tn=aJkvatisXwnSMyRh&_nc_ht=scontent.ftun14-1.fna&oh=03_AVKqj0zLOopGsjlMRbZuMTPfiQTDMe4BIo8rRKIO6jm0vQ&oe=630BA32E"
-                  class="img-fluid"   alt="">
+                      alt="" style="margin-top:-42px;">
             </div>
            <div class="container">
   <main class="grid">

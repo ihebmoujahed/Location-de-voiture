@@ -1,516 +1,201 @@
-<script >
-import PromotionsVue from './Promotions/Promotions.vue'
-
+<script setup>
+$(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+        } else {
+            $(".item").addClass("active");
+        }
+    });
+});
 </script>
 
 <template>
-  <header >
-    <nav class="navbar navbar-expand-lg navbar-light " style="position:relative;bottom:52px"> ;">
-      <div class="container-fluid">
-        <img id="logo" src="../assets/image/logo.png" alt="" />
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 72%;">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="http://localhost:3000">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+  <header>
+        <nav>
+        <ul class="menu">
+            <li class="logo"><img src="https://avantgarde.tn/static/assets/images/logo-footer.png" alt=""></li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item button"><a href="/connexion">Log In</a></li>
+            <li class="item button secondary"><a href="/inscreption">Sign Up</a></li>
+            <li class="toggle"><span class="bars"></span></li>
+              <a  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Menu
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="">Home</a>
+                <a class="dropdown-item" href="/">Home</a>
                 <a class="dropdown-item" href="">Transfert</a>
                 <a class="dropdown-item" href="/professionnels/location-voiture-longue-duree-tunisie">Locations Longues Durée</a>
                 <a class="dropdown-item" href="/nos-agences">Our agencies</a>
                 <a class="dropdown-item" href="#">Service</a>
                 <a class="dropdown-item" href="/Promotions">Promotions</a>
-
               </ul>
-            </li>
-          
-          </ul>
+        </ul>
 
-        </div>
-      </div>
     </nav>
-
   </header>
 </template>
-<style scoped>
+<style>
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+}
+nav {
+  background: #222;
+  padding: 5px 20px;
+}
+ul {
+  list-style-type: none;
+}
 a {
-  color: #707070;
-  padding: 10px 15px 15px;
-  display: block;
-  font-size: 12px;
-  line-height: 13px;
-  text-transform: uppercase;
-  transition: all 0.5s ease;
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.logo a:hover {
+  text-decoration: none;
+}
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+.logo a,
+.toggle a {
+  font-size: 20px;
+}
+.button.secondary {
+  border-bottom: 1px #444 solid;
 }
 
-.row {
+/* Mobile menu */
+.menu {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.top-menu {
-  background-color: white;
-  max-height: 50px;
+.toggle {
+  order: 1;
 }
-
-
-
-.top-navbar {
-  padding: 0;
-  margin: 0;
+.item.button {
+  order: 2;
 }
-
-.container {
-  max-width: 1140px;
-}
-
-.navbar {
-  background-color: #636363;
-  color: #707070;
-  padding: 10px 15px 15px;
-  display: block;
-  font-size: 12px;
-  line-height: 13px;
-  text-transform: uppercase;
-  height: 84px;
-}
-
-.navbar-brand {
-  max-width: 220;
+.item {
   width: 100%;
-  height: 100%;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  display: inline-block;
-  text-align: -webkit-match-parent;
-}
-
-a.active {
-  border-top: 5px solid red;
-}
-
-a:hover {
-  color: red;
-}
-
-.user {
-  color: white;
-  height: 22px;
-}
-
-.connexion {
-  font-size: 14px;
-  color: white;
-  text-transform: uppercase;
-  position: relative;
-  left: 522px;
-  top: -52px;
-  letter-spacing: 0.025px;
-  padding: 0.025px;
-  margin: 0%;
-  width: 22px;
-}
-
-.brd {
-  border-color: #707070 #707070 #707070 #707070;
-}
-
-#info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  color: #2d3667;
-  font-size: 16px;
   text-align: center;
-  padding: 14px;
-  background-color: #707070;
+  order: 3;
+  display: none;
+}
+.item.active {
+  display: block;
 }
 
-#app-cover {
+/* Navbar Toggle */
+.toggle {
+  cursor:pointer;
+}
+.bars {
+  background: #999;
+  display: inline-block;
+  height: 2px;
   position: relative;
-  bottom: 179px;
-  right: 0;
-  left: 0;
-  width: 90px;
-  height: 42px;
-  margin: 100px auto 0 auto;
-  z-index: 1;
+  transition: background .2s ease-out;
+  width: 18px;
 }
-
-#select-button {
-  position: relative;
-  height: 16px;
-  padding: 12px 14px;
-  background-color: #636363;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#options-view-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+.bars:before,
+.bars:after {
+  background: #999;
+  content: '';
+  display: block;
   height: 100%;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 3;
-  background-color: #707070;
-
-}
-
-#selected-value {
-  font-size: 16px;
-  line-height: 1;
-  margin-right: 26px;
-}
-
-.option i {
-  width: 16px;
-  height: 16px;
-}
-
-.option,
-.label {
-  color: #2d3667;
-  font-size: 16px;
-}
-
-#chevrons {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 12px;
-  padding: 9px 14px;
-}
-
-#chevrons i {
-  display: block;
-  height: 50%;
-  color: #d1dede;
-  font-size: 12px;
-  text-align: right;
-}
-
-#options-view-button:checked+#select-button #chevrons i {
-  color: #2d3667;
-}
-
-.options {
-  position: relative;
-  left: 0;
-  width: 250px;
-}
-
-#options {
-  position: absolute;
-  top: 42px;
-  right: 0;
-  left: 0;
-
-  width: 298px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 4px;
-}
-
-#options-view-button:checked~#options {
-  border: 1px solid #e2eded;
-  border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
-}
-
-.option {
-  position: relative;
-  line-height: 1;
-  transition: 0.3s ease all;
-  z-index: 2;
-}
-
-.option i {
-  position: absolute;
-  left: 14px;
-  padding: 0;
-  display: none;
-}
-
-#options-view-button:checked~#options .option i {
-  display: block;
-  padding: 12px 0;
-}
-
-.label {
-  display: none;
-  padding: 0;
-  margin-left: 27px;
-}
-
-#options-view-button:checked~#options .label {
-  display: block;
-  padding: 12px 14px;
-}
-
-.s-c {
-  position: absolute;
-  left: 0;
+  transition: all .2s ease-out;
   width: 100%;
-  height: 50%;
+}
+.bars:before {
+  top: 5px;
+}
+.bars:after {
+  top: -5px;
 }
 
-.s-c.top {
-  top: 0;
-}
-
-.s-c.bottom {
-  bottom: 0;
-}
-
-input[type="radio"] {
-  position: absolute;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.s-c:hover~i {
-  color: #fff;
-  opacity: 0;
-}
-
-.s-c:hover {
-  height: 100%;
-  z-index: 1;
-}
-
-.s-c.bottom:hover+i {
-  bottom: -25px;
-  animation: moveup 0.3s ease 0.1s forwards;
-}
-
-.s-c.top:hover~i {
-  top: -25px;
-  animation: movedown 0.3s ease 0.1s forwards;
-}
-
-@keyframes moveup {
-  0% {
-    bottom: -25px;
-    opacity: 0;
+/* Tablet menu */
+@media all and (min-width: 468px) {
+  .menu {
+      justify-content: center;
   }
 
-  100% {
-    bottom: 0;
-    opacity: 1;
+  .logo {
+      flex: 1;
+  }
+
+  .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+  }
+  .toggle {
+      order: 2;
+  }
+  .button.secondary {
+      border: 0;
+  }
+  .button a {
+      padding: 7.5px 15px;
+      background: teal;
+      border: 1px #006d6d solid;
+      border-radius:50em;
+  }
+  .button.secondary a {
+      background: transparent;    
+  }
+  .button a:hover {
+      text-decoration: none;
+      transition:all .25s;
+  }
+  .button:not(.secondary) a:hover {
+      background: #006d6d;
+      border-color: #005959;
+  }
+  .button.secondary a:hover {
+      color: #ddd;
+  } 
+}
+
+/* Desktop menu */
+@media all and (min-width: 768px) {
+  .item {
+      display: block;
+      width: auto;
+  }
+  .toggle {
+      display: none;
+  }
+  .logo {
+      order: 0;
+  }
+  .item {
+      order: 1;
+  }
+  .button {
+      order: 2;
+  }
+  .menu li {
+      padding: 15px 10px;
+  }
+  .menu li.button {
+      padding-right: 0;
   }
 }
 
-@keyframes movedown {
-  0% {
-    top: -25px;
-    opacity: 0;
-  }
-
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-.label {
-  transition: 0.3s ease all;
-}
-
-.opt-val {
-  position: absolute;
-  left: 14px;
-  width: 217px;
-  height: 21px;
-  opacity: 0;
-  background-color: #fff;
-  transform: scale(0);
-}
-
-.option input[type="radio"]:checked~.opt-val {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.option input[type="radio"]:checked~i {
-  top: 0;
-  bottom: auto;
-  opacity: 1;
-  animation: unset;
-}
-
-.option input[type="radio"]:checked~i,
-.option input[type="radio"]:checked~.label {
-  color: #fff;
-}
-
-.option input[type="radio"]:checked~.label:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-
-#options-view-button:not(:checked)~#options .option input[type="radio"]:checked~.opt-val {
-  top: -30px;
-}
-
-.option:nth-child(1) input[type="radio"]:checked~.label:before {
-  background-color: #000;
-  border-radius: 4px 4px 0 0;
-}
-
-.option:nth-child(1) input[type="radio"]:checked~.opt-val {
-  top: -31px;
-}
-
-.option:nth-child(2) input[type="radio"]:checked~.label:before {
-  background-color: #ea4c89;
-}
-
-.option:nth-child(2) input[type="radio"]:checked~.opt-val {
-  top: -71px;
-}
-
-.option:nth-child(3) input[type="radio"]:checked~.label:before {
-  background-color: #0057ff;
-}
-
-.option:nth-child(3) input[type="radio"]:checked~.opt-val {
-  top: -111px;
-}
-
-.option:nth-child(4) input[type="radio"]:checked~.label:before {
-  background-color: #32c766;
-}
-
-.option:nth-child(4) input[type="radio"]:checked~.opt-val {
-  top: -151px;
-}
-
-.option:nth-child(5) input[type="radio"]:checked~.label:before {
-  background-color: #f48024;
-}
-
-.option:nth-child(5) input[type="radio"]:checked~.opt-val {
-  top: -191px;
-}
-
-.option:nth-child(6) input[type="radio"]:checked~.label:before {
-  background-color: #006400;
-  border-radius: 0 0 4px 4px;
-}
-
-.option:nth-child(6) input[type="radio"]:checked~.opt-val {
-  top: -231px;
-}
-
-.option .fa-codepen {
-  color: #000;
-}
-
-.option .fa-dribbble {
-  color: #ea4c89;
-}
-
-.option .fa-behance {
-  color: #0057ff;
-}
-
-.option .fa-hackerrank {
-  color: #32c766;
-}
-
-.option .fa-stack-overflow {
-  color: #f48024;
-}
-
-.option .fa-free-code-camp {
-  color: #006400;
-}
-
-#option-bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 40px;
-  transition: 0.3s ease all;
-  z-index: 1;
-  display: none;
-}
-
-#options-view-button:checked~#options #option-bg {
-  display: block;
-}
-
-.option:hover .label {
-  color: #fff;
-}
-
-.option:nth-child(1):hover~#option-bg {
-  top: 0;
-  background-color: #000;
-  border-radius: 4px 4px 0 0;
-}
-
-.option:nth-child(2):hover~#option-bg {
-  top: 40px;
-  background-color: #ea4c89;
-}
-
-.option:nth-child(3):hover~#option-bg {
-  top: 80px;
-  background-color: #0057ff;
-}
-
-.option:nth-child(4):hover~#option-bg {
-  top: 120px;
-  background-color: #32c766;
-}
-
-.option:nth-child(5):hover~#option-bg {
-  top: 160px;
-  background-color: #f48024;
-}
-
-.option:nth-child(6):hover~#option-bg {
-  top: 200px;
-  background-color: #006400;
-  border-radius: 0 0 4px 4px;
-}
-</style>s
+</style>
