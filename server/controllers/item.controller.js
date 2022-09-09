@@ -25,6 +25,53 @@ var SignUp = function (req, res) {
   })
 }
 
+var Loca_car = function (req, res) {
+    var insert = "INSERT INTO location_car SET ?"
+    var params = {
+  
+        name_car: req.body.name_car,
+        describe_car: req.body.describe_car,
+        image_location: req.body.image_location,
+        price_1:req.body.price_1,
+        price_2:req.body.price_2,
+        price_3:req.body.price_3,
+  
+  
+    }
+    db.query(insert, params,(err,result) => {
+        if(err) {
+            console.log(err)
+        }else{
+            res.send(result)
+        }
+    })
+  }
+  var select_Loca_car=function(req, res) {
+    var select = "SELECT * FROM location_car"
+    db.query(select,(err,result)=>{
+        if(err) {
+            console.log(err)
+        }
+        else{
+            res.send(result)
+        }
+    })
+  }
+  var select_idloca = function (req, res) {
+    var params = req.params.id_location
+
+    var sql = "SELECT * from location_car where id_location=?"
+  
+    db.query(sql, [params],(err,result) => {
+        if(err) {
+            console.log(err)
+        }else{
+            res.send(result)
+        }
+    })
+  }
+
+  
 // UNCOMMENT IF USING MYSQL WITH CALLBACKS
 
 
@@ -49,4 +96,4 @@ var SignUp = function (req, res) {
 //   }
 // };
 
-module.exports = {SignUp};
+module.exports = {SignUp,Loca_car,select_Loca_car,select_idloca};

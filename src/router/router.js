@@ -6,6 +6,7 @@ import Login from '../components/Log in/Login.vue'
 import Promotions from '../components/Promotions/Promotions.vue'
 import Locations from '../components/Locations/Locations.vue'
 import Agencies from '../components/Agencies/Agenc.vue'
+import Book from '../components/Book/Book.vue'
 
 const routes = [
   
@@ -19,6 +20,11 @@ const routes = [
       path: '/inscreption',
       name: 'inscreption',
       component: Signin
+    },
+    {
+      path: '/Book/car',
+      name: 'inscreption',
+      component: Book
     },
     {
       path: '/connexion',

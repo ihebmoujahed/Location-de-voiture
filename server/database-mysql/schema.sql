@@ -14,23 +14,23 @@ CREATE TABLE Users (
   phone_number varchar(50) NOT NULL,
   PRIMARY KEY (id_User)
 );
-CREATE TABLE Payment (
-  id_payment int NOT NULL AUTO_INCREMENT,
-  id_User int NOT NULL,
-  student varchar(50) NOT NULL,
-  dbt varchar(300),
-  price int(20), 
-  month varchar(40),
-  FOREIGN KEY (id_User) REFERENCES Users (id_User),
-  PRIMARY KEY (id_payment)
+CREATE TABLE location_car (
+  id_location int NOT NULL AUTO_INCREMENT,
+  name_car varchar(300) NOT NULL,
+  describe_car varchar(300) NOT NULL,
+  image_location varchar(1000) NOT NULL,
+  price_1 varchar(50) NOT NULL, 
+  price_2 varchar(50) NOT NULL,
+  price_3 varchar(50) NOT NULL,
+  PRIMARY KEY (id_location)
 );
 CREATE TABLE agencies (
-  id_agencies int NOT NULL AUTO AUTO_INCREMENT,
+  id_agencies int NOT NULL  AUTO_INCREMENT,
   name_agencies varchar (255)NOT NULL,
   image_agencies varchar (255)NOT NULL,
   localisation_name varchar (255)NOT NULL,
   localisation_map varchar (500)NOT NULL,
-  PRIMARY KEY (id_agencies),
+  PRIMARY KEY (id_agencies)
 );
 
 /*  Execute this file from the command line by typing:

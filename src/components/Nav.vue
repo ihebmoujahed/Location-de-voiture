@@ -27,10 +27,10 @@ $(function() {
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="">Transfert</a>
-                <a class="dropdown-item" href="professionnels/location-voiture-longue-duree-tunisie">Locations Longues Durée</a>
-                <a class="dropdown-item" href="nos-agences">Our agencies</a>
+                <a class="dropdown-item" href="/professionnels/location-voiture-longue-duree-tunisie">Locations Longues Durée</a>
+                <a class="dropdown-item" href="/nos-agences">Our agencies</a>
                 <a class="dropdown-item" href="#">Service</a>
-                <a class="dropdown-item" href="Promotions">Promotions</a>
+                <a class="dropdown-item" href="/Promotions">Promotions</a>
               </ul>
         </ul>
 

@@ -1,0 +1,136 @@
+<template>
+    <article v-for="elem in this.Data" :key="elem" style="border-style: double">
+      <img :src="elem.image_location" alt="Sample photo">
+      <div class="text">
+        <h3>{{elem.name_car}}</h3>
+        <p>{{elem.describe_car}}.</p>
+        <p>{{elem.price_1}}.</p>
+        <p>{{elem.price_2}}.</p>
+        <p>{{elem.price_3}}.</p>
+      </div>
+    </article>
+    <div class="container">
+        <form @submit.prevent="sendEmail">
+          <label>Name</label>
+          <input 
+            type="text" 
+            v-model="name"
+            name="name"
+            placeholder="Your Name"
+          >
+          <label>Email</label>
+          <input 
+            type="email" 
+            v-model="email"
+            name="email"
+            placeholder="Your Email"
+            >
+          <label>National Identity Card</label>
+          <textarea 
+            name="cart_id"
+            type="number" 
+            v-model="cart_id"
+            placeholder="Your Id">
+        </textarea>
+        <label>Your Numero</label>
+            <textarea 
+            name="number"
+            type="number" 
+            v-model="number"
+            placeholder="number">
+          </textarea>
+          
+          <input type="submit" value="Send">
+        </form>
+    </div>
+</template>
+
+<script>
+import emailjs from 'emailjs-com';
+export default {
+  name: 'ContactUs',
+
+  data() {
+    return {
+    tt:"",
+    cart_id:"",
+    Data:[],
+    name: '',
+    email: '',
+    number: '',
+    PRICE:[]
+    }
+  },
+  mounted(){
+    var pr=''
+    const items = (localStorage.getItem("car"))
+    if (items) {
+      var s = JSON.parse(items);
+      console.log(s);
+      pr=s[0].price_3
+      this.PRICE=pr
+      this.Data=s;
+    }
+},
+  methods: {
+    sendEmail(e) {
+        var em = {
+          prix:this.PRICE,
+          name: this.name,
+          email: this.email,
+          number: this.number,
+          cart_id:this.cart_id
+        }
+      try {
+        emailjs.sendForm('ihebmoujahed', 'template_4n1za82', e.target, 'Rx72Cgmpnvk8w0xkR', em)
+        console.log(em)
+      } catch (result) {
+          console.log(result)
+      }
+      // Reset form field
+      this.prix=''
+      this.name = ''
+      this.email = ''
+      this.number= ''
+      this.cart_id=''
+    },
+  }
+}
+</script>
+
+<style scoped>
+* {box-sizing: border-box;}
+label {
+  float: left;
+}
+input[type=text], [type=email], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #b8c7b9;
+}
+.container {
+  display: block;
+  margin:auto;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+}
+</style>

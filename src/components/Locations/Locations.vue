@@ -1,5 +1,31 @@
-<script setup>
+<script >
 import Promo from '../../promo';
+import axios from 'axios';
+export default {
+  data(){
+    return {
+      Data:[],
+      id_loca:[]
+    }
+  },
+  mounted(){
+    axios.get("http://localhost:3001/api/items/select_Loca_car").then((response)=>{
+      this.Data = response.data
+      console.log(this.Data)
+    })
+  },
+  methods: {
+    reserv_car(id) {
+      axios.get(`http://localhost:3001/api/items/select_idloca/${id}`).then((response)=>{
+      this.id_loca = response.data
+      console.log(this.id_loca)
+      localStorage.setItem("car", JSON.stringify(this.id_loca));
+    })
+    
+    location.replace("/Book/car")
+    }
+  }
+}
 </script>
 <template>
     <html>
@@ -14,15 +40,15 @@ import Promo from '../../promo';
             </div>
            <div class="container">
   <main class="grid">
-    <article v-for="elem in Promo" :key="elem">
-      <img :src="elem.image" alt="Sample photo">
+    <article v-for="elem in this.Data" :key="elem">
+      <img :src="elem.image_location" alt="Sample photo">
       <div class="text">
-        <h3>{{elem.title}}</h3>
-        <p>{{elem.text}}.</p>
-        <p>{{elem.prix1}}.</p>
-        <p>{{elem.prix2}}.</p>
-        <p>{{elem.prix3}}.</p>
-        <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Plus</a>
+        <h3>{{elem.name_car}}</h3>
+        <p>{{elem.describe_car}}.</p>
+        <p>{{elem.price_1}}.</p>
+        <p>{{elem.price_2}}.</p>
+        <p>{{elem.price_3}}.</p>
+        <button @click="reserv_car(elem.id_location)" class="btn btn-primary btn-block">Plus</button>
       </div>
     </article>
     

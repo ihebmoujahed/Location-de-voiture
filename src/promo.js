@@ -1,12 +1,12 @@
 //loction for the cars 
 // array of objects containing
 const Promo = [{
-    title:"SUZUKI SWIFT",
-    image:"https://avantgarde.tn/static/upload/76254375ade8804afbb36d9990b064e4.jpg",
-    text:"Tarifs mensuels",
-    prix1:"1 ans 1650 TND ",
-    prix2:"2 ans 1550 TN",
-    prix3:"3 ans 1450 TND"
+    name_car:"SUZUKI SWIFT",
+    image_location:"https://avantgarde.tn/static/upload/76254375ade8804afbb36d9990b064e4.jpg",
+    describe_car:"Tarifs mensuels",
+    price_1:"1 ans 1650 TND ",
+    price_2:"2 ans 1550 TN",
+    price_3:"3 ans 1450 TND"
 },
 {
     title:"SUZUKI DZIRE",
