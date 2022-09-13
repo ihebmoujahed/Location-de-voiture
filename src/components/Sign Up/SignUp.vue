@@ -1,6 +1,5 @@
 <script >
 import axios from 'axios'
-
 export default {
   methods: {
     ss() {
@@ -121,7 +120,7 @@ export default {
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
                   <img
-                    src="https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/297509517_778902546571064_7627047616391354112_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=-Xwso-JMFK8AX_wYsuL&_nc_ht=scontent.ftun16-1.fna&oh=03_AVL136EIIfBvzgiP2dE3xYKSR1IKVLEhtALhnHsr0N439A&oe=63149F44"
+                    src="src/assets/image/signup.png"
                     class="img-fluid" alt="Sample image">
 
                 </div>

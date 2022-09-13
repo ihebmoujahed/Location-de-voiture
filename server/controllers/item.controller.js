@@ -24,6 +24,19 @@ var SignUp = function (req, res) {
       }
   })
 }
+var selectUser = function (req, res) {
+    var password = req.body.password
+    var email = req.body.email
+    sql = "SELECT * FROM Users WHERE email = ? and password=?"
+    db.query(sql, [email, password], (err, items, fields) => {
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        res.status(200).send(items);
+      }
+    });
+  };
+  
 
 var Loca_car = function (req, res) {
     var insert = "INSERT INTO location_car SET ?"
@@ -96,4 +109,4 @@ var Loca_car = function (req, res) {
 //   }
 // };
 
-module.exports = {SignUp,Loca_car,select_Loca_car,select_idloca};
+module.exports = {SignUp,Loca_car,select_Loca_car,select_idloca,selectUser};

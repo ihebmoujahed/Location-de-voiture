@@ -45,10 +45,10 @@ export default {
       <div class="text">
         <h3>{{elem.name_car}}</h3>
         <p>{{elem.describe_car}}.</p>
-        <p>{{elem.price_1}}.</p>
-        <p>{{elem.price_2}}.</p>
-        <p>{{elem.price_3}}.</p>
-        <button @click="reserv_car(elem.id_location)" class="btn btn-primary btn-block">Plus</button>
+        <p>{{elem.price_1}}</p>
+        <p>{{elem.price_2}}</p>
+        <p>{{elem.price_3}}</p>
+        <button @click="reserv_car(elem.id_location)" class="btn btn-primary btn-block">Reserve</button>
       </div>
     </article>
     

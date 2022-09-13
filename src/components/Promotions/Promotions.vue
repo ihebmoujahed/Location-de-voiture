@@ -20,7 +20,7 @@ import Loaction from "../../locations"
                 <h3>{{ elem.title }}</h3>
                 <p>{{ elem.text }}</p>
 
-                <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Plus</a>
+                <a href="" class="btn btn-primary btn-block">Plus</a>
               </div>
             </article>
 

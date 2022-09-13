@@ -19,11 +19,9 @@
             <label>Email</label>
             <input type="email" v-model="email" name="email" placeholder="Your Email">
             <label>National Identity Card</label>
-            <textarea name="cart_id" type="number" v-model="cart_id" placeholder="Your Id">
-        </textarea>
+            <input name="cart_id" type="number" v-model="cart_id" placeholder="Your Id">
             <label>Your Numero</label>
-            <textarea name="number" type="number" v-model="number" placeholder="number">
-          </textarea>
+            <input name="number" type="number" v-model="number" placeholder="number">
 
             <input type="submit" value="Send">
         </form>
@@ -69,7 +67,7 @@ export default {
                 email: this.email,
                 number: this.number,
                 cart_id: this.cart_id
-            }
+            }  
             try {
                 emailjs.sendForm('ihebmoujahed', 'template_4n1za82', e.target, 'Rx72Cgmpnvk8w0xkR', em)
                 location.replace("http://localhost:3000/professionnels/location-voiture-longue-duree-tunisie")
